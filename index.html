@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Salva al Oso! Adivina el Número Secreto 🐻</title>
+    <!-- SEO básico -->
+    <meta
+      name="description"
+      content="Juego divertido donde debes adivinar el número secreto para salvar al oso. Solo tienes 5 intentos... ¿podrás lograrlo?"
+    />
+    <meta
+      name="keywords"
+      content="juego, adivina el numero, salvar al oso, juego interactivo, numero secreto, juego de adivinanza"
+    />
+    <meta name="author" content="daniel baena" />
+
+    <!-- Íconos Remix para los iconitos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <!-- Animaciones personalizadas -->
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <!-- Responsivo (media queries) -->
+    <link rel="stylesheet" href="assets/css/mediaquery.css" />
+  </head>
+
+  <body>
+    <!-- Contenedor principal -->
+    <div class="main">
+      <!-- Columna izquierda con instrucciones y formulario -->
+      <div class="main-left">
+        <!-- Instrucciones del juego -->
+        <div class="instructions">
+          <ol>
+            <p class="title">¿Cómo jugar? 🕹️</p>
+            <li>
+              <i class="ri-shield-check-line"></i> Elige un número entre 0 y 10
+            </li>
+            <li>
+              <i class="ri-shield-check-line"></i> El oso te dará pistas si
+              fallas 🐻✨
+            </li>
+          </ol>
+
+          <!-- Advertencias al jugador -->
+          <ul>
+            <p class="title">⚠️ Advertencias ⚠️</p>
+            <li>
+              <i class="ri-error-warning-line"></i> Solo tienes 5 vidas... digo,
+              intentos
+            </li>
+            <li>
+              <i class="ri-error-warning-line"></i> Si fallas todas... el oso no
+              lo contará 😵
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulario para ingresar número y botones -->
+        <div class="form">
+          <!-- Aquí aparecen los mensajes de feedback -->
+          <p class="alert" id="result"></p>
+
+          <p class="title">¿Qué número te late? 🤔</p>
+          <!-- Input para el número -->
+          <input type="number" id="number" placeholder="Entre 1 y 10" />
+          <div class="buttons">
+            <!-- Botón principal para intentar -->
+            <button class="primary-btn" onclick="tryGame()">
+              ¡Probar suerte! 🍀
+            </button>
+            <!-- Botón secundario para reiniciar -->
+            <button class="secondary-btn" onclick="resetGame()">
+              Resetear 🔄
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha con título, oso y tema -->
+      <div class="main-right">
+        <h1>🐻 ¡Salva al oso! 🐻</h1>
+        <h2>
+          ¿Puedes adivinar el número secreto antes de que sea demasiado tarde?
+        </h2>
+        <!-- Imagen del oso con interacción -->
+        <img
+          class="bear"
+          id="bear"
+          src="assets/imgs/bear.png"
+          alt="oso preocupado esperando ser salvado"
+        />
+        <!-- Tip para cambiar el tema tocando el oso -->
+        <p class="title">
+          <i class="ri-information-line"></i> Pulsa sobre el oso para cambiar el
+          tema
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer con autor y redes sociales -->
+    <footer>
+      <p class="author">Hecho con ❤️ por <span>Daniel Baena</span></p>
+      <div class="links">
+        <!-- Íconos de redes sociales -->
+        </a>
+        <a href="https://www.instagram.com/dxbae_/" target="_blank">
+          <i class="ri-instagram-line"></i>
+        </a>
+        <a href="https://github.com/dxbae-dev" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gerardo-daniel-ramirez-baena-4069a8322/" target="_blank">
+          <i class="ri-linkedin-box-line"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Script para cambiar tema al tocar el oso -->
+    <script src="assets/js/bear.js"></script>
+    <!-- Script del juego de adivinar -->
+    <script src="assets/js/guess-number.js"></script>
+  </body>
+</html>

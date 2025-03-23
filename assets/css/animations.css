@@ -1,0 +1,72 @@
+/* Animaciones generales */
+body, .main, .main-left, .form, .main-right, footer {
+    transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+/* Animación al cambiar de tema */
+body.pardo, body.panda {
+    transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+/* Oso animado al click */
+.bear {
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.9s ease;
+}
+
+.bear:active {
+    transform: scale(0.95) rotate(-2deg);
+}
+
+/* Fade-in en contenedores */
+.main-left, .form, .main-right, footer {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botones con efecto */
+button {
+    transition: all 0.5s ease;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Alert box "pop" */
+.alert {
+    transition: all 0.4s ease-in;
+}
+
+.alert.show {
+    visibility: visible;
+    transform: scale(1.05);
+}
+
+/* Links footer hover */
+.links a {
+    transition: all 0.5s ease;
+}
+
+.links a:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* Agregamos también una ligera vibración al oso si quieres */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.bear:hover {
+    animation: wiggle 0.7s ease;
+}

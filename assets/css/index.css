@@ -1,0 +1,278 @@
+/* Importación de fuente desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Reset general */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de colores base */
+:root {
+  --bg-color: #f8f8f8;
+  --text-color: #1f1f1f;
+  --main-color: #e0e0e0;
+}
+
+/* Estilo base para body */
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Temas personalizados para cambiar el color según el tipo de oso */
+body.pardo {
+  --bg-color: #381c12;
+  --text-color: #b9b9b9;
+  --main-color: #74411c;
+  background: var(--bg-color);
+}
+
+body.panda {
+  --bg-color: #2b2a2a;
+  --text-color: #e2e2e2;
+  --main-color: #474747;
+  background: var(--bg-color);
+}
+
+/* Contenedor principal (donde van ambas columnas) */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--main-color);
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 90px 90px;
+}
+
+/* Columna izquierda con instrucciones y formulario */
+.main-left {
+  background-color: var(--bg-color);
+  padding: 20px;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Instrucciones */
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+ol,
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Título genérico */
+.title {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+li {
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: start;
+}
+
+/* Formulario para adivinar número */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 90%;
+  height: 100%;
+  background-color: var(--main-color);
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid var(--text-color);
+}
+
+/* Caja de alerta oculta por defecto */
+.alert {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  width: 300px;
+  height: 60px;
+  padding: 7px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+.form .title {
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+/* Input para el número */
+input {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid var(--text-color);
+  padding: 10px;
+}
+
+/* Efecto al enfocar el input */
+input:focus {
+  outline: none;
+  border-color: var(--text-color);
+  box-shadow: 0 0 5px var(--text-color);
+}
+
+/* Quitar flechas en input type number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Contenedor de botones */
+.buttons {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* Estilo base para botones */
+button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Botón principal (Probar suerte) */
+.primary-btn {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+.primary-btn:hover {
+  box-shadow: 0 0 8px var(--text-color);
+}
+
+/* Botón secundario (Resetear) */
+.secondary-btn {
+  background-color: var(--text-color);
+  border: 1px solid transparent;
+  color: var(--bg-color);
+}
+.secondary-btn:hover {
+  box-shadow: 0 0 8px var(--text-color);
+}
+
+/* Columna derecha con oso y textos */
+.main-right {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-right h1 {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.main-right h2 {
+  font-size: 2rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Imagen del oso */
+.bear {
+  width: 500px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Footer con redes sociales */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+footer p span {
+  font-weight: 600;
+}
+
+.links {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 30px;
+}
+
+/* Íconos sociales */
+.links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+}
+
+.links a:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
